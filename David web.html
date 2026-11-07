@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>David Website</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050816;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: rgba(5,8,22,0.9);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #00f7ff;
+    text-shadow: 0 0 15px #00f7ff;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #00f7ff;
+}
+
+/* HERO */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background:
+    radial-gradient(circle at center, #10294a 0%, #050816 65%);
+}
+
+.hero h1 {
+    font-size: clamp(40px, 9vw, 80px);
+    letter-spacing: 4px;
+    color: white;
+    text-shadow: 0 0 20px #00eaff;
+    animation: muncul 1.5s ease;
+}
+
+.hero h1 span {
+    color: #00f7ff;
+}
+
+.hero p {
+    margin-top: 20px;
+    color: #aaa;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 35px;
+    border: 2px solid #00f7ff;
+    border-radius: 30px;
+    color: #00f7ff;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.btn:hover {
+    background: #00f7ff;
+    color: #050816;
+    box-shadow: 0 0 30px #00f7ff;
+}
+
+/* CARD */
+.section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 35px;
+    color: #00f7ff;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #101a30;
+    padding: 35px 20px;
+    border: 1px solid #183c56;
+    border-radius: 20px;
+    transition: .4s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    border-color: #00f7ff;
+    box-shadow: 0 0 25px #00f7ff55;
+}
+
+.card .icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #00f7ff;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+    padding: 70px 10%;
+    background: #0b1225;
+}
+
+.about p {
+    color: #aaa;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    border-top: 1px solid #183c56;
+}
+
+footer span {
+    color: #00f7ff;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width: 600px) {
+    nav {
+        padding: 20px 5%;
+    }
+
+    nav a {
+        margin-left: 8px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">DAVID WEB.</div>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#fitur">Fitur Kami</a>
+        <a href="#about">Untukmu</a>
+    </div>
+</nav>
+
+<section class="hero" id="home">
+    <h1>WELCOME TO <span>DAVID WEB</span></h1>
+    <p>
+        Coding adalah darah dagingku.<br>
+        Tanpa coding kita tidak akan kurang tidur🗿.
+    </p>
+    <a href="#fitur" class="btn">JELAJAHI →</a>
+</section>
+
+<section class="section" id="fitur">
+    <h2>FITUR KAMI</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🚀</div>
+            <h3>Performa Cepat</h3>
+            <p>Website ringan dengan desain modern dan responsif.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">⚡</div>
+            <h3>Teknologi Tinggi</h3>
+            <p>Menggabungkan kreativitas dan teknologi masa depan.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌌</div>
+            <h3>Desain Kreatif</h3>
+            <p>Tampilan futuristik dengan warna neon yang menarik.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>UNTUKMU</h2>
+    <p>
+        Selamat datang di website ku,ya walau belum
+      bisa di pencet tapi kedepannya saya akan 
+      menambahkan fitur klik dengan javascript.
+    </p>
+</section>
+
+<footer>
+    © 2026 <span>DAVID WEB</span> | Dibuat selama 2 minggu
+</footer>
+
+</body>
+</html>
